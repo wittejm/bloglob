@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.prose summary {
+  font-weight: 700;
+  cursor: pointer;
+}
