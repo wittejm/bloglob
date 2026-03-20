@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getPost } from "../posts";
 
@@ -11,6 +12,10 @@ const formatDate = (date: string) =>
 export default function Post() {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getPost(slug) : undefined;
+
+  useEffect(() => {
+    document.title = post ? `${post.title} - Bloglob` : "Bloglob";
+  }, [post]);
 
   if (!post) {
     return <p className="text-gray-400">Post not found.</p>;

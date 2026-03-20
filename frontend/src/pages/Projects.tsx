@@ -1,24 +1,18 @@
-const projects = [
-  {
-    name: "BookSharePDX",
-    url: "https://booksharepdx.com",
-    description: "A social platform I built for sharing books with neighbors",
-  },
-  {
-    name: "Typogenetics",
-    url: "https://wittejm.github.io/typogenetics",
-    description:
-      "Douglas Hofstadter's toy genetics game with self-referential patterns and stuff",
-  },
-  {
-    name: "EcologySim",
-    url: "https://wittejm.github.io/ecologysim",
-    description:
-      "Plants, deer, and wolves running around eating each other and exhibiting population dynamics",
-  },
-];
+import { useEffect } from "react";
+import projects from "virtual:projects";
+
+function formatDate(iso: string): string {
+  const date = new Date(iso);
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+}
 
 export default function Projects() {
+  useEffect(() => { document.title = "Projects - Bloglob"; }, []);
+
   return (
     <div className="max-w-2xl">
       <h2 className="text-2xl font-bold text-white mb-6">Projects</h2>
@@ -33,7 +27,24 @@ export default function Projects() {
             >
               {project.name}
             </a>
+            <span className="text-gray-500 text-sm ml-2">
+              (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-400"
+              >
+                github
+              </a>
+              )
+            </span>
             <p className="text-gray-400 mt-1">{project.description}</p>
+            {project.lastCommit && (
+              <p className="text-gray-500 text-sm mt-1">
+                last updated {formatDate(project.lastCommit)}
+              </p>
+            )}
           </li>
         ))}
       </ul>

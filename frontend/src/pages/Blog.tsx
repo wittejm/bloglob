@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { posts } from "../posts";
 
@@ -9,6 +10,8 @@ const formatDate = (date: string) =>
   });
 
 export default function Blog() {
+  useEffect(() => { document.title = "Bloglob"; }, []);
+
   return (
     <div className="max-w-2xl">
       <h2 className="text-2xl font-bold text-white mb-6">Posts</h2>

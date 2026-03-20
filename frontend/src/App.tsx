@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { HashRouter, Routes, Route, NavLink } from "react-router-dom";
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import Projects from "./pages/Projects";
 import Blog from "./pages/Blog";
 import Post from "./pages/Post";
@@ -62,7 +62,7 @@ function Layout() {
         </main>
 
         <footer className="px-8 py-6 text-sm text-gray-600 border-t border-gray-800">
-          Jordan &middot; <a href="https://github.com/wittejm" className="hover:text-gray-400">GitHub</a>
+          Jordan &middot; <a href="https://github.com/wittejm" className="hover:text-gray-400">GitHub</a> &middot; <a href="mailto:wittejm@gmail.com" className="hover:text-gray-400">wittejm@gmail.com</a>
         </footer>
       </div>
     </div>
@@ -71,8 +71,8 @@ function Layout() {
 
 export default function App() {
   return (
-    <HashRouter>
+    <BrowserRouter basename="/bloglob">
       <Layout />
-    </HashRouter>
+    </BrowserRouter>
   );
 }
