@@ -51,4 +51,7 @@ Movies
 Twitch streamers
 Piano with lessons
 
-Threads I’ve been following with Claude, most of which are still wanting for some more payoff.
+8. Threads I’ve been following with Claude, most of which are still wanting for some more payoff.
+
+9. Tensions/Paradoxes
+* I have value because I exist / I must do things.
