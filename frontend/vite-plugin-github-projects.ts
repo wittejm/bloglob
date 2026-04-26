@@ -33,6 +33,14 @@ const projects: Project[] = [
     description:
       "Plants, deer, and wolves running around eating each other and exhibiting population dynamics",
   },
+  {
+    name: "Artificial Life",
+    repo: "wittejm/alife",
+    url: "https://wittejm.github.io/alife",
+    github: "https://github.com/wittejm/alife",
+    description:
+      "A series of methods from the Artificial Life literature",
+  },
 ];
 
 async function fetchLastCommitDate(repo: string): Promise<string | null> {
