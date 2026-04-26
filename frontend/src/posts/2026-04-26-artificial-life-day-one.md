@@ -17,7 +17,7 @@ I started a first foray into the project today. Turns out there are a lot of est
 
 A 2D grid with two chemicals whose concentrations diffuse at different rates, plus a reaction where one chemical reproduces by consuming the other. Energy input keeps the system from settling, while continuous washout removes excess buildup. [Check out the app!](https://wittejm.github.io/alife/)  Try tweaking the energy input and washout rates and watch what patterns appear.
 
-Of the six bullet points above, the work I've done so far only hits two: Shows two tiers of emergence, and Thermodynamics.
+Of the six bullet points above, the work I've done so far only hits one: thermodynamics. Doesn't even hit two tiers of emergence yet. It really looks comparable to Game of Life, actually.
 
 Variations to Gray-Scott for next time:
 
@@ -25,4 +25,5 @@ Variations to Gray-Scott for next time:
 - Spatially varying energy input to add local dynamics
 - An "interestingness" heuristic.
 - Claude-autonomous parameter search to find juicy patterns.
+- Figure out what "tier 2" is going to look like in this model and how we get there.
 - More tiers and evolution are beyond the bounds of the model, I believe. We'll see more models in the future, then.
